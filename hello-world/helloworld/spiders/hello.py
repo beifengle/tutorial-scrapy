@@ -2,6 +2,8 @@ import scrapy
 from helloworld.items import HelloworldItem
 from scrapy.shell import inspect_response
 from scrapy.utils.response import open_in_browser
+
+scrapy.spiders.Spider
 class HelloSpider(scrapy.Spider):
     name = 'hello'  #指定此爬虫spider在项目中的唯一名称
     allowed_domains = ['toscrape.com'] #爬取范围
@@ -21,9 +23,9 @@ class HelloSpider(scrapy.Spider):
         hello_item = HelloworldItem()
         hello_item['title'] = title
         yield hello_item
-        yield scrapy.Request(url="http://books.toscrape.com/",  #2.8章节 scrapy parse测试用例代码
-                              dont_filter=True,
-                              callback=self.parse_2)
+        # yield scrapy.Request(url="http://books.toscrape.com/",  #2.8章节 scrapy parse测试用例代码
+        #                       dont_filter=True,
+        #                       callback=self.parse_2)
 
     def parse_2(self, response):
         ''' Contracts合约规则
