@@ -3,7 +3,6 @@ from helloworld.items import HelloworldItem
 from scrapy.shell import inspect_response
 from scrapy.utils.response import open_in_browser
 
-scrapy.spiders.Spider
 class HelloSpider(scrapy.Spider):
     name = 'hello'  #指定此爬虫spider在项目中的唯一名称
     allowed_domains = ['toscrape.com'] #爬取范围
