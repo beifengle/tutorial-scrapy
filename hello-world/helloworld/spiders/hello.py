@@ -22,6 +22,10 @@ class HelloSpider(scrapy.Spider):
         print("解析提取到title:",title)
         hello_item = HelloworldItem()
         hello_item['title'] = title
+        import time
+        time.sleep(5)
+        # from scrapy.exceptions import CloseSpider
+        # raise CloseSpider(reason="大哥，我不想爬取了。")
         yield hello_item
         # yield scrapy.Request(url="http://books.toscrape.com/",  #2.8章节 scrapy parse测试用例代码
         #                       dont_filter=True,
@@ -38,3 +42,6 @@ class HelloSpider(scrapy.Spider):
         hello_item = HelloworldItem()
         hello_item['title'] = title
         yield hello_item
+
+    def closed(self, reason):
+        print('===爬虫关闭原因===:', reason)
