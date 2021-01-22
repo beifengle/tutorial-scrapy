@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<head>
+<title>爬虫•异常警报邮件发送HTML模板</title>
+</head>
+<body>
+<table class="gridtable" style="border-style: solid;margin-top:5%;width:900px;font-family: 微软雅黑;font-size:14px;color:#333333;border-width: 1px;border-color: #666666;border-collapse: collapse;" >
+    <colgroup>
+        <col name="" width="105">
+    </colgroup>
+    <thead>
+        <tr>
+            <th colspan="4" style="border-top-left-radius: 5px ;border-top-right-radius: 5px;border-width: 1px;padding: 8px;background-color: #4f6b72;color:#fff;font-size: larger;">爬虫•异常警报</th>
+        </tr>
+    </thead>
+    <tbody style="border-width: 1px; padding: 8px; border-style: solid; background-color: #ffffff;">
+        <tr>
+            <td width="105"  style="font-weight:bold;border-width: 1px; padding: 8px; border-style: solid;">异常编号</td>
+			<td width="285" style="border-width: 1px; padding: 8px; border-style: solid;">{exceptionNo}</td>
+			<td width="105" style="border-width: 1px; padding: 8px; border-style: solid;font-weight:bold;">异常发生日期</td>
+			<td style="border-width: 1px; padding: 8px; border-style: solid;">{exceptionOccurDate}</td>
+        </tr>
+        <tr>
+            <td style="border-width: 1px; padding: 8px; border-style: solid;font-weight:bold;">异常阶段</td>
+			<td style="border-width: 1px; padding: 8px; border-style: solid;">{exceptionType}</td>
+			<td style="border-width: 1px; padding: 8px; border-style: solid;font-weight:bold;">异常所属爬虫</td>
+			<td style="border-width: 1px; padding: 8px; border-style: solid;">{exceptionSpider}</td>
+        </tr>
+        <tr>
+            <td style="border-width: 1px; padding: 8px; border-style: solid;font-weight:bold;">异常来源主机</td>
+			<td style="border-width: 1px; padding: 8px; border-style: solid;">{exceptionHost}</td>
+			<td style="border-width: 1px; padding: 8px; border-style: solid;font-weight:bold;">主机所属环境</td>
+			<td style="border-width: 1px; padding: 8px; border-style: solid;">{exceptionEnv}</td>
+        </tr>
+        <tr>
+            <td style="border-width: 1px; padding: 8px; border-style: solid;font-weight:bold;">爬取游戏用户</td>
+			<td style="border-width: 1px; padding: 8px; border-style: solid;">{exceptionPlayer}</td>
+			<td style="border-width: 1px; padding: 8px; border-style: solid;font-weight:bold;">异常来源进程</td>
+			<td style="border-width: 1px; padding: 8px; border-style: solid;">{exceptionProcess}</td>
+        </tr>
+        <tr>
+            <td style="border-width: 1px; padding: 8px; border-style: solid;font-weight:bold;">事件</td>
+			<td colspan="3" style="border-width: 1px; padding: 8px; border-style: solid;">{exceptionEvent}</td>
+        </tr>
+        <tr>
+            <td style="border-width: 1px; padding: 8px; border-style: solid;font-weight:bold;">详情</td>
+			<td colspan="3" style="border-width: 1px; padding: 8px; border-style: solid;word-break:break-all;">{exceptionDetail}</td>
+        </tr>
+        <tr>
+            <td style="border-width: 1px; padding: 8px; border-style: solid;font-weight:bold;">数据源地址</td>
+			<td colspan="3" style="border-width: 1px; padding: 8px; border-style: solid;word-break:break-all;">{exceptionSourceUrl}</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
